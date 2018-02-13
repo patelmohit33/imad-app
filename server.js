@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-    articleone: {`
+    articleone: {
     title: 'article one| MOhit Patel',
     heading:'article one',
     date:'Jan 23, 2018',
@@ -19,17 +19,16 @@ var articles={
     </p>
     <p>
          This is random content for my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.
-    </p>`,
+    </p>,
     },
     articletwo: {
-         title: 'article two| MOhit Patel',
+     title: 'article two| MOhit Patel',
     heading:'article two',
     date:'Jan 23, 2018',
     content:`
     <p>
          This is random content for my second article.
-    </p>
-    `,
+    </p>,
     },
     articlethree: {
         title: 'article three| MOhit Patel',
@@ -82,17 +81,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req, res) {
-     res.send(createtemplate(articleone));
+app.get('/:articlename',function(req, res) {
+     
+     res.send(createtemplate(articles[ariclename]));
 });
 
-app.get('/article-two',function(req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three',function(req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
