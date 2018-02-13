@@ -21,10 +21,10 @@ var articleone={
     </p>`,
 };
 function createtemplate(data){
-    variable title=data.title;
-    variable date=data.date;
-    variable heading=data.heading;
-    variable content = data.content;
+    var title=data.title;
+    var date=data.date;
+    var heading=data.heading;
+    var content = data.content;
     var htmltemplate=`
     <html>
         <head>
@@ -54,8 +54,7 @@ function createtemplate(data){
             </div>
         </body>
     </html>
-
-    `;
+ `;
         return htmltemplate;
 }
 app.get('/', function (req, res) {
