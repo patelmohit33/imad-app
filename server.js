@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-    articleone: {
+    'article-one': {
     title: 'article one| MOhit Patel',
     heading:'article one',
     date:'Jan 23, 2018',
@@ -21,23 +21,23 @@ var articles={
          This is random content for my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.
     </p>,
     },
-    articletwo: {
+    'article-two': {
      title: 'article two| MOhit Patel',
     heading:'article two',
     date:'Jan 23, 2018',
     content:`
     <p>
          This is random content for my second article.
-    </p>,
+    </p>`,
     },
-    articlethree: {
+    'article-three': {
         title: 'article three| MOhit Patel',
     heading:'article three',
     date:'Jan 23, 2018',
     content:`
     <p>
          This is random content for my third article.
-    </p>,
+    </p>,`
     }
 };
 function createtemplate(data){
