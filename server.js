@@ -10,7 +10,7 @@ var articles={
     title: 'article one| MOhit Patel',
     heading:'article one',
     date:'Jan 23, 2018',
-    content:
+    content:`
     <p>
          This is random content for my first article.This is random content for my first article.This is random content my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.
     </p>
@@ -19,7 +19,7 @@ var articles={
     </p>
     <p>
          This is random content for my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.This is random content for my first article.
-    </p>,
+    </p>`,
     },
     'article-two': {
      title: 'article two| MOhit Patel',
